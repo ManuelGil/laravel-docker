@@ -1,44 +1,44 @@
-# Partimos de la imagen php en su versión 8.1
-FROM php:8.1-fpm
+FROM composer:2.4 as build
+COPY . /app/
+RUN composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction
 
-# Copiamos los archivos package.json composer.json y composer-lock.json a /var/www/
-COPY composer*.json /var/www/
+FROM php:8.1-apache-buster as dev
 
-# Nos movemos a /var/www/
-WORKDIR /var/www/
+ENV APP_ENV=dev
+ENV APP_DEBUG=true
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Instalamos las dependencias necesarias
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libzip-dev \
-    libpng-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
-    libonig-dev \
-    locales \
-    zip \
-    jpegoptim optipng pngquant gifsicle \
-    vim \
-    git \
-    curl
+RUN apt-get update && apt-get install -y zip
+RUN docker-php-ext-install pdo pdo_mysql
 
-# Instalamos extensiones de PHP
-RUN docker-php-ext-install pdo_mysql zip exif pcntl
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install gd
+COPY . /var/www/html/
+COPY --from=build /usr/bin/composer /usr/bin/composer
+RUN composer install --prefer-dist --no-interaction
 
-# Instalamos composer
-RUN curl -sS <https://getcomposer.org/installer> | php -- --install-dir=/usr/local/bin --filename=composer
+COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY .env.dev /var/www/html/.env
 
-# Instalamos dependendencias de composer
-RUN php composer.phar install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+RUN php artisan config:cache && \
+    php artisan route:cache && \
+    chmod 777 -R /var/www/html/storage/ && \
+    chown -R www-data:www-data /var/www/ && \
+    a2enmod rewrite
 
-# Copiamos todos los archivos de la carpeta actual de nuestra
-# computadora (los archivos de laravel) a /var/www/
-COPY . /var/www/
+FROM php:8.1-apache-buster as production
 
-# Exponemos el puerto 9000 a la network
-EXPOSE 9000
+ENV APP_ENV=production
+ENV APP_DEBUG=false
 
-# Corremos el comando php-fpm para ejecutar PHP
-CMD [""php-fpm""]
+RUN docker-php-ext-configure opcache --enable-opcache && \
+    docker-php-ext-install pdo pdo_mysql
+COPY docker/php/conf.d/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
+COPY --from=build /app /var/www/html
+COPY docker/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY .env.prod /var/www/html/.env
+
+RUN php artisan config:cache && \
+    php artisan route:cache && \
+    chmod 777 -R /var/www/html/storage/ && \
+    chown -R www-data:www-data /var/www/ && \
+    a2enmod rewrite
