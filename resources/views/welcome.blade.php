@@ -1,132 +1,603 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-        <title>Laravel</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>MyShop
+ | inicio</title>
+  <link rel="stylesheet" href="assets/landing/css/animate.css">
+  
+  <link rel="stylesheet" href="assets/landing/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/landing/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/landing/css/magnific-popup.css">
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/landing/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="assets/landing/css/jquery.timepicker.css">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+  <link rel="stylesheet" href="assets/landing/css/flaticon.css">
+  <link rel="stylesheet" href="assets/landing/css/style.css">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+  <!-- Bootstrap core CSS     -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!--  Material Dashboard CSS    -->
+  <link href="assets/css/material-dashboard.css" rel="stylesheet" />
+  <link rel="canonical" href="//www.creative-tim.com/product/material-dashboard-pro" />
+  <!--  CSS for Demo Purpose, don't include it in your project     -->
+  <link href="assets/css/demo.css" rel="stylesheet" />
+  <!--     Fonts and icons     -->
+  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="assets/css/google-roboto-300-700.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+  <nav class="navbar navbar-dark">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="/">MyShop | <b>MyShop
+</b></a> -->
+        <a class="navbar-brand" href="/"><img src="assets/landing/images/logo.png" alt="250px" width="250px" style="margin-top:-30px"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="/">
+              <i class="material-icons">home</i> Inicio
+            </a>
+          </li>
+          <li class="">
+            <a href="{{ route('register') }}">
+              <i class="material-icons">person_add</i> Register
+            </a>
+          </li>
+        <li>
+          <a href="{{ route('login') }}">
+            <i class="material-icons">fingerprint</i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END nav -->
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+<div class="hero-wrap js-fullheight">
+  <div class="home-slider owl-carousel js-fullheight">
+    
+    <div class="slider-item js-fullheight" style="background-image:url(assets/landing/images/lock.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+          <div class="col-md-7 ftco-animate">
+            <div class="text w-100">
+              <h2><b>BIENVENIDO A MyShop</b></h2>
+              <h1 class="mb-4 color-white">Contamos con los mejores espacios de trabajo</h1>
+              <p><a href="{{ route('login') }}" class="btn btn-primary">ver más</a> <a href="#" class="btn btn-white">Cotactenos</a></p>
             </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+
+    <div class="slider-item js-fullheight" style="background-image:url(assets/landing/images/welcome.JPG);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+          <div class="col-md-7 ftco-animate">
+            <div class="text w-100">
+              <h2><b>ATENCION AL CLIENTE</b></h2>
+              <h1 class="mb-4 color-white">Nos destacamos por nuestro buen servicio y atención al usuario</h1>
+              <p><a href="{{ route('login') }}" class="btn btn-primary">ver más</a> <a href="#" class="btn btn-white">Contáctanos</a></p>
+            </div>
+          </div>
+        </div><strong></strong>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<div class="nav-center">
+  <ul class="nav nav-pills nav-pills-warning nav-pills-icons" role="tablist">
+                        <!--
+            color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+          -->
+          <li>
+            <a href="#description-1" role="tab" data-toggle="tab">
+              <i class="material-icons">info</i> Nuestra empresa
+            </a>
+          </li>
+          <li class="">
+            <a href="#schedule-1" role="tab" data-toggle="tab">
+              <i class="material-icons">location_on</i> Ubicacion
+            </a>
+          </li>
+          <li>
+            <a href="#tasks-1" role="tab" data-toggle="tab">
+              <i class="material-icons">gavel</i> Herramientas
+            </a>
+          </li>
+          <li>
+            <a href="#tasks-2" role="tab" data-toggle="tab">
+              <i class="material-icons">help</i> How Do
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane" id="description-1">
+          <div class="card card-plain2">
+            <div class="empresa-texto-izquierdo">
+              <div class="item-nosotros">
+                <div class="col-4">
+                  <h2><b>Nosotros</b></h2>    
+                  <span></span>   
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>MyShop Colombiana Comercializadora S.A es una compañía con 40 años de experiencia dedicada a la comercialización de productos para el sector eléctrico, redes y comunicaciones, iluminación y seguridad electrónica, cuenta con 6 agencias comerciales en Colombia, además de su sede en Ecuador, cobertura que facilita la entrega oportuna de nuestros productos y soluciones a través de nuestra red de distribución.</p>
+                    <p>MyShop S.A es una empresa siempre a la vanguardia, nuestra experiencia gira entorno a construir relaciones duraderas con nuestros clientes, donde además de brindar asesoría, capacitación y acompañamiento, los apoyamos para que alcancen sus metas comerciales y empresariales.</p>
+                    <p>Nuestra oferta de productos atiende las necesidades de nuestros clientes en los sectores industrial, comercial y residencial. Una de nuestras fortalezas es ofrecer al mercado la mejor oferta de productos, soluciones y proveedores a nivel internacional para la satisfacción y solución de sus necesidades.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-mision">
+                <div class="col-4">
+                  <h2><b>Misión</b></h2>    
+                  <span> </span>  
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>Brindamos soluciones integrales e innovadoras que añaden valor a nuestros clientes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-vision">
+                <div class="col-4">
+                  <h2><b>Visión</b></h2>     
+                  <span> </span>  
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>Generar rentabilidad para garantizar la permanencia en el largo plazo brindando soluciones integrales e innovadoras, valor para nuestros clientes, calidad de vida y satisfacción para nuestros empleados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="politica-calidad">
+              <div>
+                <div class="col-3">
+                  <h2><b>Política <br>Integrada del Sistema de Gestión</b></h2>
+                  <span></span>
+                </div>
+                <div class="col-4">
+                  <div class="texto-politica-calidad">
+                    <p>MyShop S.A. empresa dedicada a brindar soluciones integrales por medio de la importación y comercialización de productos de energía, comunicaciones, iluminación y seguridad electrónica; está comprometida en mantener la satisfacción de nuestros clientes contando con un personal competente y capacitado.</p>
+                    <p>MyShop S.A. adopta como parte de sus compromisos la prevención de los riesgos y la seguridad de la cadena de suministro internacional, la prevención de los accidentes y enfermedades laborales, la protección del medio ambiente y la prevención de la contaminación, cumpliendo así con los requisitos legales aplicables a la compañía y garantizando una mejora continua del Sistema de Gestión Integrado.</p>
+                    <p>Esta política será comunicada y divulgada a todo el personal de la organización incluyendo contratistas y visitantes.</p>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="img-pol-calidad">
+                    <br>
+                    <p><img class="alignnone wp-image-7615 size-full" src="https://MyShop.com/wp-content/uploads/lista1/11/fachada-MyShop.jpg" alt="" width="100" height="100">  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="schedule-1">
+          <div class="card card-plain">
+            <div class="card-content">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5035892721726!2d-75.58551318474926!3d6.197092628589801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682446b6fa345%3A0x4b8abeddfff91c5d!2sMyShop%20Colombiana%20Comercializadora%20S.A.!5e0!3m2!1ses!2sco!4v1623276906760!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="tasks-1">
+          <div class="card card-plain">
+
+            <div class="card-content">
+              <div class="col-lg-3">
+                <div class="card card-pricing card-raised">
+                  <div class="content">
+                    <h6 class="category"><b>HelpDesk</b></h6>
+                    <div class="icon icon-rose">
+                      <img src="assets/img/HelpDesk.png" alt="">
+                    </div>
+                    <h3 class="card-title">Soporte</h3>
+                    <p class="card-description">
+                      Mesa de ayuda general para la empresa.
+                    </p>
+                    <a href="https://MyShop.com.co/glpi/" target="_blank" class="btn btn-rose btn-round">Ingresar<div class="ripple-container"></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card card-pricing card-raised">
+                  <div class="content">
+                    <h6 class="category"><b>Inventario</b></h6>
+                    <div class="icon icon-rose">
+                      <img src="assets/img/Inventario.png" alt="">
+                    </div>
+                    <h3 class="card-title">Manejo de inventarios</h3>
+                    <p class="card-description">
+                      Manejo de inventarios.
+                    </p>
+                    <a href="https://MyShop.com.co/ocsreports/" target="_blank" class="btn btn-rose btn-round">Ingresar<div class="ripple-container"></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card card-pricing card-raised">
+                  <div class="content">
+                    <h6 class="category"><b>Universidad</b></h6>
+                    <div class="icon icon-rose">
+                      <img src="assets/img/Universidad.png" alt="">
+                    </div>
+                    <h3 class="card-title">Universidad MyShop</h3>
+                    <p class="card-description">
+                      Punto de aprendizaje.
+                    </p>
+                    <a href="http://universidad.MyShop
+.info/index.php" target="_blank" class="btn btn-rose btn-round">Ingresar<div class="ripple-container"></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card card-pricing card-raised">
+                  <div class="content">
+                    <h6 class="category"><b>CRM</b></h6>
+                    <div class="icon icon-rose">
+                      <img src="assets/img/CRM.png" alt="">
+                    </div>
+                    <h3 class="card-title">Administración</h3>
+                    <p class="card-description">
+                      Sistema de Administración.
+                    </p>
+                    <a href="https://crmMyShop.com/index.php?module=Users&action=Login&login_language=es_ES" target="_blank" class="btn btn-rose btn-round">Ingresar<div class="ripple-container"></div></a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="tasks-2">
+          <div class="card card-plain2">
+            <div class="empresa-texto-izquierdo">
+              <div class="item-nosotros">
+                <div class="col-4">
+                  <h2><b>¿Cómo conectar al video proyector?</b></h2>    
+                  <span></span>   
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>C-Connection es un software para proyección en red utilizando un proyector CASIO. Lea atentamente la siguiente información antes de descargar el software.</p>
+                    <p><b>Requerimientos mínimos del sistema</b></p>
+                    <small><b>Sistema operativo</b></small>
+                    <p>
+                      - Microsoft Windows®10 (64/32bit).
+                      <br>
+                      - Microsoft Windows®8/8.1 (64/32bit).
+                      <br>
+                      - Microsoft Windows®7 SP1 (64/32bit).
+                      <br>
+                      - OS X 10.11 o superior.
+                    </p>
+                    <small><b>Software</b></small>
+                    <p>
+                      - CPU Intel Core i3 o superior o CPU recomendada para el sistema operativo que se utiliza.
+                      <br>
+                      - CPU Intel Core 2 Duo o superior.
+                    </p>
+                    <small><b>Hardware</b></small>
+                    <p>
+                      - Pantalla a todo color con una resolución de al menos 1024x768 que es compatible con Windows ® 10, Windows ® 8 / 8.1, Windows ® 7.
+                      <br>
+                    </p>
+                    <p>A continuación encontrara la descarga directa del programa que requiere para hacer uso de esta herramienta, solo necesita escoger cual necesita dependiendo del equipo que tenga.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-mision">
+                <div class="col-4">
+                  <h2><b>Windows <i class='fa fa-windows'></i></b></h2>    
+                  <span> </span>  
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>Si tienes un dispositivo con sistema operativo <b>Windows</b>, descarga acá.</p>
+                  </div>
+                  <a href="https://support.casio.com/common/support/download_files/en/007/software/C-ConnectionSetup107112.msi" class="button">
+                    <input type='submit' class='btn btn-finish btn-fill btn-rose btn-wd' value="Descargar"/>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item-vision">
+                <div class="col-4">
+                  <h2><b>Mac <i class='fa fa-apple'></i></b></h2>     
+                  <span> </span>  
+                </div>
+                <div class="col-8">
+                  <div>
+                    <p>Si tienes un dispositivo con sistema operativo <b>Mac</b>, descarga acá.</p>
+                  </div>
+                  <a href="https://support.casio.com/common/support/download_files/en/007/software/C-ConnectionSetup107112.dmg" class="button">
+                    <input type='submit' class='btn btn-finish btn-fill btn-rose btn-wd' value="Descargar"/>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item-vision">
+                <div class="col-4">
+                  <h2><b>Movil</b></h2>     
+                  <span> </span>  
+                </div>
+                <div class="col-12">
+                  <div>
+                    <p>Si tienes un dispositivo movil <b>IOS</b> o <b>Android</b>.</p>
+                  </div>
+                  <div class="col-sm-4 form-group label-floating">
+                    <p><i class='fa fa-android'></i> Android</p>
+                    <img src="assets/img/app-casio-android.png" alt="">
+                    <button class="btn btn-raised btn-round btn-rose" data-toggle="modal" data-target="#noticeModal1">
+                      Ampliar
+                    </button>
+                    <div class="modal fade" id="noticeModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                      <div class="modal-dialog modal-notice">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title text-center" id="myModalLabel1"><b><i class='fa fa-android'></i> Android</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="instruction">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="picture2">
+                                    <img src="assets/img/app-casio-android.png" alt="Thumbnail Image" class="img-rounded img-responsive">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                              <button type="button" class="btn btn-rose btn-round" data-dismiss="modal">Ok!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end notice modal -->
+                  </div>
+                  <div class="col-sm-4 form-group">
+                    <p><i class='fa fa-apple'></i> IOS</b></p>
+                    <img src="assets/img/app-casio-IOS.png" alt="">
+                    <button class="btn btn-raised btn-round btn-rose" data-toggle="modal" data-target="#noticeModal">
+                      Ampliar
+                    </button>
+                    <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-notice">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title text-center" id="myModalLabel"><b><i class='fa fa-apple'></i> IOS</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="instruction">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="picture2">
+                                    <img src="assets/img/app-casio-IOS.png" alt="Thumbnail Image" class="img-rounded img-responsive">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                              <button type="button" class="btn btn-rose btn-round" data-dismiss="modal">Ok!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end notice modal -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="politica-calidad">
+              <div>
+                <div class="col-3">
+                  <h2><b>¡YOU CAN DO IT! <br>Instalación en PC</b></h2>
+                  <span></span>
+                </div>
+                <div class="col-4">
+                  <div class="texto-politica-calidad">
+                    <p><b>1). </b>Descargue la aplicación anteriormente mencionada dependiendo del sistema operativo que tenga.</p>
+                    <p><b>2). </b>Una vez termine la descarga abra el archivo.</p>
+                    <p><b>3). </b>Clic en "siguiente".</p>
+                    <p><b>4). </b>Leemos los terminos y condiciones (de ser necesario) y le damos en "Siguiente".</p>
+                    <p><b>5). </b>Se abrira una ventana en la que se pediran unos permisos para que la aplicación haga cambios en el equipo y le damos en "Si", (nada peligroso) he inmediatamente empezara la instalación.</p>
+                    <p><b>6). </b>Al terminar la instalación aparecera una ventana información la cual confirmara que la instalación ha sido un exito, acá marcamos la opción de "Iniciar aplicación" y le damos en "Finalizar".</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <h2><b>Uso</b></h2>
+                  <span></span>
+                </div>
+                <div class="col-4">
+                  <div class="texto-politica-calidad">
+                    <p><b>1). </b>Con el programa previamente instalado en el equipo, nos conectamos a la red de wifi llamada "Videoproyector".</p>
+                    <p><b>2). </b>Abrimos la aplicación.</p>
+                    <p><b>3). </b>Dentro de la aplicación aparece un dispositivo llamado <b>casiolpjB94</b>, damos clic al lado derecho donde dice "Connect".</p>
+                    <p><b>4). </b>Se abre una ventana en que que se debe colocar el codigo de ingreso, en este caso es el <b>1234</b>.</p>
+                    <p><b>5). </b>Una vez ingresado el codigo estara listo para compartir pantalla, solo hay que dar clic en la flecha que apunta hacia arriba que esta ubicada en la parte superior del dispositivo ya mencionado anteriormente.</p>
+                  </div>
+                  <div class="col-5">
+                    <div class="img-pol-calidad">
+                      <br>
+                      <p><img class="alignnone wp-image-7615 size-full" src="https://www.casio-intl.com/product/image/1425568479367/" alt="" width="100" height="100">  </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-10 col-lg-6">
+    <!--<div class="subscribe mb-5">
+     <form action="" class="subscribe-form" method="POST">
+      @csrf
+      <div class="form-group d-flex">
+        <input type="email" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="Ingresa un email válido"
+        class="form-control rounded-left" name="email" placeholder="Ingrese su correo eléctronico">
+
+        <input type="submit" value="Suscribirse" class="form-control submit px-3">
+      </div>
+    </form>
+  </div>-->
+</div>
+</div>
+
+
+
+<div class="row mt-5">
+  <div class="col-md-6 col-lg-8">
+
+    <p class="copyright">
+      Copyright
+      &copy;
+      <a href="https://MyShop.com/">MyShop</a>
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+    </p>
+
+  </div>
+  <div class="col-md-6 col-lg-4 text-md-right">
+   <p class="mb-0 list-unstyled">
+    <a class="mr-md-3" style="color: white"   target="_blank" href="http://MyShop.com/politicas-de-privacidad/">Términos y condiciones</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="assets/landing/js/jquery.min.js"></script>
+<script src="assets/landing/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="assets/landing/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/landing/js/jquery.easing.1.3.js"></script>
+<script src="assets/landing/js/jquery.waypoints.min.js"></script>
+<script src="assets/landing/js/jquery.stellar.min.js"></script>
+<script src="assets/landing/js/jquery.animateNumber.min.js"></script>
+<script src="assets/landing/js/bootstrap-datepicker.js"></script>
+<script src="assets/landing/js/jquery.timepicker.min.js"></script>
+<script src="assets/landing/js/owl.carousel.min.js"></script>
+<script src="assets/landing/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/landing/js/scrollax.min.js"></script>
+<script src="assets/landing/js/main.js"></script>
+
+<!--  DataTables.net Plugin    -->
+<script src="assets/js/jquery.datatables.js"></script>
+
+<script src="assets/js/material.min.js" type="text/javascript"></script>
+<script src="assets/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+
+
+<!-- Material Dashboard javascript methods -->
+<script src="assets/js/material-dashboard.js"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="assets/js/demo.js"></script>
+<script type="text/javascript">
+  $().ready(function() {
+    demo.checkFullPageBackgroundImage();
+
+    setTimeout(function() {
+            // after 1000 ms we add the class animated to the login/register card
+      $('.card').removeClass('card-hidden');
+    }, 700)
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#datatables').DataTable({
+      "pagingType": "full_numbers",
+      "lengthMenu": [
+        [10, 25, 50, -1],
+        [10, 25, 50, "All"]
+        ],
+      responsive: true,
+      language: {
+        search: "_INPUT_",
+        searchPlaceholder: "Search records",
+      }
+
+    });
+
+
+    var table = $('#datatables').DataTable();
+
+        // Edit record
+    table.on('click', '.edit', function() {
+      $tr = $(this).closest('tr');
+
+      var data = table.row($tr).data();
+      alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+    });
+
+        // Delete a record
+    table.on('click', '.remove', function(e) {
+      $tr = $(this).closest('tr');
+      table.row($tr).remove().draw();
+      e.preventDefault();
+    });
+
+        //Like record
+    table.on('click', '.like', function() {
+      alert('You clicked on Like button');
+    });
+
+    $('.card .material-datatables label').addClass('form-group');
+  });
+</script>
+
+
+
+
+</body>
 </html>
