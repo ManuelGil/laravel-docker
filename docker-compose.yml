@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-    #PHP
+    #PHP Service
     app:
         build:
             context: .
@@ -20,14 +20,14 @@ services:
         networks:
             - app-network
 
-    #Nginx
+    #Nginx Service
     nginx:
         image: nginx:alpine
         container_name: nginx
         restart: unless-stopped
         tty: true
         ports:
-            - "81:80"
+            - "80:80"
             - "443:443"
         volumes:
             - ./:/var/www
@@ -35,7 +35,7 @@ services:
         networks:
             - app-network
 
-    #MySQL
+    #MySQL Service
     db:
         image: mysql:5.7.22
         container_name: db
@@ -45,7 +45,7 @@ services:
             - "3306:3306"
         environment:
             MYSQL_DATABASE: laravel
-            MYSQL_ROOT_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: your_laravel_db_password
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
         volumes:
@@ -54,7 +54,7 @@ services:
         networks:
             - app-network
 
-#Networks
+#Docker Networks
 networks:
     app-network:
         driver: bridge

@@ -4,7 +4,6 @@ FROM php:8.1-fpm
 COPY composer*.json /var/www/
 
 COPY docker/nginx/default.conf /etc/nginx/sites-available/default.conf
-COPY .env.example /var/www/html/.env
 
 # Set working directory
 WORKDIR /var/www
