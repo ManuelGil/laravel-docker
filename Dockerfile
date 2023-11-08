@@ -55,5 +55,5 @@ USER www
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 
-# Run the Nginx server
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+# Run the PHP
+CMD ["php-fpm"]
