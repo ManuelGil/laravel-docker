@@ -27,30 +27,37 @@ services:
         restart: unless-stopped
         tty: true
         ports:
-            - "80:80"
-            - "443:443"
+            - '80:80'
+            - '443:443'
         volumes:
             - ./:/var/www
             - ./docker/nginx/:/etc/nginx/conf.d/
         networks:
             - app-network
 
-    #MySQL Service
+    #MariaDB Service
     db:
-        image: mysql:5.7.22
+        image: docker.io/bitnami/mariadb:11.1
         container_name: db
-        restart: unless-stopped
-        tty: true
-        ports:
-            - "3306:3306"
         environment:
-            MYSQL_DATABASE: laravel
-            MYSQL_ROOT_PASSWORD: your_laravel_db_password
-            SERVICE_TAGS: dev
-            SERVICE_NAME: mysql
+            - ALLOW_EMPTY_PASSWORD=no
+            - MARIADB_ROOT_USER=root
+            - MARIADB_ROOT_PASSWORD=your_laravel_db_password
+            - MARIADB_DATABASE=laravel
+            - MARIADB_CHARACTER_SET=utf8mb4
+            - MARIADB_COLLATE=utf8mb4_unicode_ci
         volumes:
-            - dbdata:/var/lib/mysql/
-            - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+            - 'dbdata:/bitnami/db'
+        networks:
+            - app-network
+    phpmyadmin:
+        image: docker.io/bitnami/phpmyadmin:5
+        container_name: phpmyadmin
+        ports:
+            - '81:8080'
+            - '444:8443'
+        depends_on:
+            - db
         networks:
             - app-network
 
