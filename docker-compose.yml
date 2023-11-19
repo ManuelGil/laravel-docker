@@ -14,6 +14,10 @@ services:
             SERVICE_NAME: app
             SERVICE_TAGS: dev
         working_dir: /var/www
+        ports:
+            - '9000:9000'
+        depends_on:
+            - db
         volumes:
             - ./:/var/www
             - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
@@ -42,17 +46,24 @@ services:
         environment:
             - ALLOW_EMPTY_PASSWORD=no
             - MARIADB_ROOT_USER=root
-            - MARIADB_ROOT_PASSWORD=your_laravel_db_password
+            - MARIADB_ROOT_PASSWORD=secret
             - MARIADB_DATABASE=laravel
             - MARIADB_CHARACTER_SET=utf8mb4
             - MARIADB_COLLATE=utf8mb4_unicode_ci
+        ports:
+            - '3306:3306'
         volumes:
-            - 'dbdata:/bitnami/db'
+            - './docker/mariadb:/bitnami/db'
         networks:
             - app-network
+
+    #PHPMyAdmin Service
     phpmyadmin:
         image: docker.io/bitnami/phpmyadmin:5
         container_name: phpmyadmin
+        environment:
+            - ALLOW_EMPTY_PASSWORD=yes
+            - PHPMYADMIN_ALLOW_ARBITRARY_SERVER=yes
         ports:
             - '81:8080'
             - '444:8443'
@@ -67,5 +78,5 @@ networks:
         driver: bridge
 #Volumes
 volumes:
-    dbdata:
+    mariadb:
         driver: local
