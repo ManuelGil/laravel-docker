@@ -72,6 +72,22 @@ services:
         networks:
             - app-network
 
+    #Jenkins Service
+    jenkins:
+        image: jenkins/jenkins:lts
+        container_name: jenkins
+        privileged: true
+        user: root
+        ports:
+            - 8080:8080
+            - 50000:50000
+        volumes:
+            - ~/jenkins_home:/var/jenkins_home
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /usr/local/bin/docker:/usr/local/bin/docker
+        networks:
+            - app-network
+
 #Docker Networks
 networks:
     app-network:
