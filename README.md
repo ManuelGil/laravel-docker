@@ -1,5 +1,7 @@
 # Collaborative Activity Groups SO-B01 16 (Operational Systems)
 
+[![Build Status](https://app.travis-ci.com/ManuelGil/laravel-docker.svg?branch=main)](https://app.travis-ci.com/ManuelGil/laravel-docker)
+
 ## Requirements
 
 - [PHP 8.1](https://www.php.net/releases/8_1_0.php) or later
